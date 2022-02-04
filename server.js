@@ -17,7 +17,7 @@ app.get("/api/hello", (req, res) => {
    res.json({ greeting: "hello API" });
 });
 
-app.get("/api/timestamp", (req, res) => {
+app.get("/api", (req, res) => {
   let now = new Date();
 
   res.json({
@@ -26,7 +26,7 @@ app.get("/api/timestamp", (req, res) => {
   });
 });
 
-app.get("/api/timestamp/:date_string", (req, res) => {
+app.get("/api/:date_string", (req, res) => {
    let dateString = req.params.date_string;
    let passedInValue = new Date(dateString);
 
